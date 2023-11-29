@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2023 at 09:44 AM
+-- Generation Time: Nov 29, 2023 at 06:35 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -381,6 +381,16 @@ CREATE TABLE `vendor` (
   `Phone_Number` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `vendor`
+--
+
+INSERT INTO `vendor` (`Vendor_ID`, `Name`, `Email`, `Phone_Number`) VALUES
+(1, 'Elegance Linens', 'EleganceLinens@gmail.com', '3123213521'),
+(2, 'Spotless Solutions Co', 'spotlesscustomerservice@gmail.com', '3133465578'),
+(3, 'Aesthetic Aura Furnishings ', 'aaurafurnishings@gmail.com', '4193214223'),
+(4, 'Gastronova Provisions', 'gastronova@gmail.com', '3135670789');
+
 -- --------------------------------------------------------
 
 --
@@ -392,6 +402,24 @@ CREATE TABLE `vendor_hotel_association` (
   `Hotel_ID` int(11) NOT NULL,
   `Material` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `vendor_hotel_association`
+--
+
+INSERT INTO `vendor_hotel_association` (`Vendor_ID`, `Hotel_ID`, `Material`) VALUES
+(1, 0, 'linens, towels, and uniforms'),
+(1, 1, 'linens, towels, and uniforms'),
+(1, 2, 'linens, towels, and uniforms'),
+(2, 0, 'cleaning products, equipment, and maintenance tools'),
+(2, 1, 'cleaning products, equipment, and maintenance tools'),
+(2, 2, 'cleaning products, equipment, and maintenance tools'),
+(3, 0, 'furniture'),
+(3, 1, 'furniture'),
+(3, 2, 'furniture'),
+(4, 0, 'food and beverages'),
+(4, 1, 'food and beverages'),
+(4, 2, 'food and beverages');
 
 --
 -- Indexes for dumped tables
@@ -489,7 +517,7 @@ ALTER TABLE `reservation`
 -- AUTO_INCREMENT for table `vendor`
 --
 ALTER TABLE `vendor`
-  MODIFY `Vendor_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Vendor_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
